@@ -11,9 +11,9 @@ WIP. Stuff has to change.
 
 It uses [redux-promise](https://github.com/acdlite/redux-promise/tree/sequence).
 
-See [playground](playground/) for an example. Mainly [actions](playground/boxes/actions.es6),
-[db](playground/boxes/db.es6), [feed](playground/boxes/feed.es6) and the
-[reducer](playground/boxes/reducer.es6).
+See [example](example/) for a use case. Mainly [actions](example/boxes/actions.es6),
+[db](example/boxes/db.es6), [feed](example/boxes/feed.es6) and the
+[reducer](example/boxes/reducer.es6).
 
 Run it with `npm start` after `npm install` :). It waits on [http://localhost:3000](http://localhost:3000).
 

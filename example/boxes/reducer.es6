@@ -1,7 +1,7 @@
 import 'core-js/modules/es6.array.find';
 import { ADD, CLEAR, FETCH_ALL } from './actions';
 import { name as dbName } from './db';
-import { FEED_CHANGE, pouchify } from 'redux-pouch';
+import { FEED_CHANGE, FEED_COMPLETE, FEED_ERROR, pouchify } from 'redux-pouch';
 const NEXT = 'next';
 const START = 'start';
 
@@ -46,6 +46,10 @@ export function boxes(state=[], action) {
     case NEXT:
       return action.payload;
     }
+
+  case FEED_COMPLETE:
+    console.log('complete');
+    return state;
 
   // TODO @sven? :)
   case FEED_CHANGE:

@@ -7,6 +7,6 @@ $BIN/watchify --debug --verbose \
   --extension .es6 \
   --plugin browserify-hmr \
   --transform babelify \
-  --outfile playground/playground.js \
-  playground/playground.es6 &
-$BIN/static ./playground --port 3000 --cache 0 --host-address 0.0.0.0
+  --outfile example/example.js\
+  example/example.es6 &
+$BIN/static ./example --port 3000 --cache 0 --host-address 0.0.0.0
