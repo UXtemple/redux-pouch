@@ -2,8 +2,6 @@ import adapter from './adapter';
 import invariant from 'invariant';
 import PouchDB from 'pouchdb';
 
-const RESET_LOADING_STATE = 'RESET_LOADING_STATE';
-
 // Action key that carries API call info interpreted by this Redux middleware.
 export const POUCH_DB = Symbol('Pouchdb');
 
