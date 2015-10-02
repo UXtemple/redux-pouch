@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BIN=node_modules/.bin
+
+$BIN/watchify --debug --verbose \
+  --require ./index:redux-pouch \
+  --extension .es6 \
+  --plugin browserify-hmr \
+  --transform babelify \
+  --outfile playground/playground.js \
+  playground/playground.es6 &
+$BIN/static ./playground --port 3000 --cache 0 --host-address 0.0.0.0

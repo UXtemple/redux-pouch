@@ -1,0 +1,6 @@
+" Add the following to your .vimrc to automatically load this on startup
+" if filereadable(".vim.custom")
+"     so .vim.custom
+" endif
+
+let NERDTreeIgnore = ['\.js$']

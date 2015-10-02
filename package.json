@@ -1,0 +1,53 @@
+{
+  "name": "redux-pouch",
+  "description": "PouchDB backed redux",
+  "main": "index.js",
+  "scripts": {
+    "start": ".bin/start",
+    "test": "babel-node ./node_modules/.bin/tape __tests__/*-test.es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UXtemple/redux-pouch.git"
+  },
+  "keywords": [
+    "redux",
+    "pouch",
+    "pouchdb"
+  ],
+  "author": "UXtemple <hi@uxtemple.com>",
+  "contributors": [
+    "Darío Javier Cravero <dario@uxtemple.com>",
+    "Tom Parandyk <tom@uxtemple.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UXtemple/redux-pouch/issues"
+  },
+  "homepage": "https://github.com/UXtemple/redux-pouch#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-plugin-react-transform": "^1.1.1",
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "browserify-hmr": "^0.3.0",
+    "core-js": "^1.2.1",
+    "node-static": "^0.7.7",
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1",
+    "react-redux": "^2.1.2",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.1.1",
+    "redux": "^3.0.0",
+    "redux-logger": "^2.0.0",
+    "redux-promise": "^0.6.0-alpha",
+    "redux-thunk": "^1.0.0",
+    "tape": "^4.2.1",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "invariant": "^2.1.1",
+    "pouchdb": "^4.0.3"
+  }
+}

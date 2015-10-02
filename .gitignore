@@ -1,0 +1,5 @@
+**/*.js
+*.log
+.DS_Store
+node_modules/*
+public/*.js*
