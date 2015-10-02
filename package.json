@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": ".bin/start",
-    "test": "babel-node ./node_modules/.bin/tape __tests__/*-test.es6"
+    "test": "babel-node ./node_modules/.bin/tape __tests__/*-test.es6",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -44,7 +45,8 @@
     "redux-promise": "^0.6.0-alpha",
     "redux-thunk": "^1.0.0",
     "tape": "^4.2.1",
-    "watchify": "^3.4.0"
+    "watchify": "^3.4.0",
+    "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "invariant": "^2.1.1",
