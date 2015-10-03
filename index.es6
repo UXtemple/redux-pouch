@@ -19,6 +19,7 @@ export {
 export { POUCH_DB } from './src/middleware';
 
 export changes from './src/changes';
+export sync from './src/sync';
 export pouchify from './src/pouchify';
 
 export default from './src/middleware';
