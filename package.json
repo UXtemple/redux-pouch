@@ -3,6 +3,9 @@
   "description": "PouchDB backed redux",
   "main": "index.js",
   "scripts": {
+    "build": "babel --extensions .es6 --ignore node_modules/**,__tests__/** --out-dir . .",
+    "clean": "find . -name '*.js*' -type f -not -path './package.json' -not -path './node_modules/*' -exec rm {} \\;",
+    "prepublish": "npm run build",
     "start": ".bin/start",
     "test": "babel-node ./node_modules/.bin/tape __tests__/*-test.es6",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
