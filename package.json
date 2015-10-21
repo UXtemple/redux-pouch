@@ -32,27 +32,27 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-plugin-react-transform": "^1.1.1",
-    "babelify": "^6.3.0",
-    "browserify": "^11.1.0",
-    "browserify-hmr": "^0.3.0",
-    "core-js": "^1.2.1",
+    "babelify": "^6.4.0",
+    "browserify": "^11.2.0",
+    "browserify-hmr": "^0.3.1",
+    "core-js": "^1.2.2",
     "node-static": "^0.7.7",
-    "react": "^0.14.0-rc1",
-    "react-dom": "^0.14.0-rc1",
-    "react-redux": "^2.1.2",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
-    "redux": "^3.0.0",
-    "redux-logger": "^2.0.0",
+    "redux": "^3.0.3",
+    "redux-logger": "^2.0.4",
     "redux-promise": "^0.6.0-alpha",
     "redux-thunk": "^1.0.0",
-    "tape": "^4.2.1",
+    "tape": "^4.2.2",
     "watchify": "^3.4.0",
     "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "invariant": "^2.1.1",
-    "pouchdb": "^4.0.3"
+    "pouchdb": "^5.0.0"
   }
 }
