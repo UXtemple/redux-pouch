@@ -2,7 +2,7 @@ const create = (db, payload) => db
   .post(payload)
   .then(result => find(db, result.id));
 
-const del = (db, id) => find(db, id)
+const del = (db, payload) => find(db, payload.id)
   .then(doc => {
     const nextDoc = {
       ...doc,
@@ -20,14 +20,13 @@ const delAttachment = (db, id, att) => find(db, id)
         .removeAttachment(doc.id, att, doc._rev)
         .then(finalDoc => find(db, finalDoc.id)));
 
-const find = (db, id) => db
-  .get(id);
-  // .then(doc => utils.mapCouchDbDocToObject(doc));
+const find = (db, id) => db.get(id);
 
-const findAll = db => db
+const findAll = (db, {options}) => db
   .allDocs({
     attachments: true,
-    include_docs: true
+    include_docs: true,
+    ...options
   })
   .then(docs => docs.rows.map(row => row.doc));
 
@@ -42,7 +41,7 @@ const update = (db, payload) => find(db, payload.id)
     };
 
     return db
-      .put(utils.mapObjectToCouchDbDoc(nextDoc))
+      .put(nextDoc)
       .then(finalDoc => find(db, finalDoc.id));
   });
 
