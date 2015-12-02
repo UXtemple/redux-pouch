@@ -24,7 +24,7 @@ const delAttachment = (db, id, att) => find(db, id)
 
 const find = (db, id) => db.get(id);
 
-const findAll = (db, {options}) => db
+const findAll = (db, {options}={}) => db
   .allDocs({
     attachments: true,
     include_docs: true,
