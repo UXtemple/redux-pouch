@@ -1,3 +1,5 @@
+const changePassword = (db, {user, password}) => db.changePassword(user, password);
+
 const create = (db, payload) => db
   .post(payload)
   .then(result => find(db, result.id));
@@ -30,6 +32,25 @@ const findAll = (db, {options}) => db
   })
   .then(docs => docs.rows.map(row => row.doc));
 
+const getSession = db => db.getSession();
+
+const getUser = (db, {user}) => db.getUser(user);
+
+const login = (db, {user, password}) => db.login(user, password);
+
+const logout = db => db.logout();
+
+const signup = (db, {user, password}) => db.signup(user, password)
+
+const signupOrLogin = (db, {user, password}) => signup(db, {user, password})
+  .catch(err => {
+    if (err.name === 'conflict') {
+      return login(db, {user, password});
+    } else {
+      throw err;
+    }
+  });
+
 const update = (db, payload) => find(db, payload.id)
   .then(doc => {
     delete payload._rev;
@@ -46,11 +67,18 @@ const update = (db, payload) => find(db, payload.id)
   });
 
 export default {
+  changePassword,
   create,
   del,
   delAttachment,
   deleteAll,
   find,
   findAll,
+  getSession,
+  getUser,
+  login,
+  logout,
+  signup,
+  signupOrLogin,
   update
 };

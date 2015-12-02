@@ -3,7 +3,7 @@
   "description": "PouchDB backed redux",
   "main": "index.js",
   "scripts": {
-    "build": "babel --extensions .es6 --ignore node_modules/**,__tests__/** --out-dir . .",
+    "build": "babel $1 --extensions .es6 --ignore node_modules/**,__tests__/**,playground/** --out-dir . .",
     "clean": "find . -name '*.js*' -type f -not -path './package.json' -not -path './node_modules/*' -exec rm {} \\;",
     "prepublish": "npm run build",
     "start": ".bin/start",
@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "invariant": "^2.1.1",
-    "pouchdb": "^5.0.0"
+    "pouchdb": "^5.0.0",
+    "pouchdb-authentication": "^0.4.2"
   }
 }

@@ -13,7 +13,7 @@ const loggerMiddleware = createLogger({
 const createStoreWithMiddleware = applyMiddleware(
   thunkMiddleware,
   promiseMiddleware,
-  pouchMiddleware,
+  pouchMiddleware(),
   loggerMiddleware
 )(createStore);
 

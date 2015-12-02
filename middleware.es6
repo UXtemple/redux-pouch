@@ -5,7 +5,7 @@ import PouchDB from 'pouchdb';
 const RESET_LOADING_STATE = 'RESET_LOADING_STATE';
 
 // Action key that carries API call info interpreted by this Redux middleware.
-export const POUCH_DB = 'redux-puch/middleware/POUCH_DB'; // Symbol('Pouchdb');
+export const POUCH_DB = 'redux-pouch/middleware/POUCHDB';
 
 export default function pouchMiddleware(store) {
   return next => action => {
